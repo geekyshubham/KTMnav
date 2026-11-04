@@ -1,0 +1,1 @@
+PASS: Gen3 controls, actual-data-only telemetry view, pairing help and app language selection

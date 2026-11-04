@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "four button assignments",
+    "custom mapping enable switch",
+    "mapping saved across process restart",
+    "Android access disclosure",
+    "reset defaults preserves enable switch",
+    "disable execution without losing assignments",
+    "included navigation integrations link",
+    "included multiple-bike Garage link"
+  ],
+  "physical_handlebar_tested": false
+}

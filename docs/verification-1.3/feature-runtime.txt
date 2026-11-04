@@ -1,0 +1,45 @@
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: stage=rebind_listener
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=sms
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=sms_hidden
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=sms_disabled
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=call
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=call_end
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=call
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=call_end
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stage=gps
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 0
+PASS: feature runtime checks
+KTMnav notification listener is connected
+Real SMS from the emulator's Google Messages is mirrored as a MESSAGE banner
+Hide-content setting keeps message text off the dash
+Disabled message mirroring ignores new SMS
+Call state monitor starts with phone permission granted
+Incoming emulator call is detected as ringing
+The real dialer's incoming-call notification is detected for the caller banner
+SET while ringing answers the real call (SET -> Answer call: Answered call)
+BACK while ringing silences without answering (BACK -> Silence ringer: Silenced ringer)
+Fine location permission is granted for ride tools
+GPS speed above the limit produces the OVERSPEED alert banner
+Manual recording writes a GPX ride with 8 points and 194 m
+Ride stats record the GPS speed (max 100 km/h)
+Recorded test ride can be deleted
+No physical motorcycle connected; banners were captured before the dash transport.
+

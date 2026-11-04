@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <uses-permission android:name="app.comaps.google.permission.READ_NAVIGATION_DATA" />
+    <uses-permission android:name="app.comaps.fdroid.permission.READ_NAVIGATION_DATA" />
+    <uses-permission android:name="app.comaps.permission.READ_NAVIGATION_DATA" />
+    <uses-permission android:name="app.comaps.huawei.permission.READ_NAVIGATION_DATA" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+        <package android:name="com.tomtom.gplay.navapp" />
+        <package android:name="net.osmand" />
+        <package android:name="net.osmand.plus" />
+        <package android:name="com.kurviger.app" />
+        <package android:name="com.calimoto.calimoto" />
+        <package android:name="app.organicmaps" />
+        <package android:name="menion.android.locus" />
+        <package android:name="menion.android.locus.pro" />
+        <package android:name="app.comaps.google" />
+        <package android:name="app.comaps.fdroid" />
+        <package android:name="app.comaps" />
+        <package android:name="app.comaps.huawei" />
+        <package android:name="com.waze" />
+        <package android:name="com.here.app.maps" />
+        <package android:name="com.sygic.aura" />
+        <package android:name="cz.seznam.mapy" />
+        <intent><action android:name="android.intent.action.VIEW" /><data android:scheme="geo" /></intent>
+        <intent><action android:name="android.intent.action.VIEW" /><data android:scheme="google.navigation" /></intent>
+        <intent><action android:name="android.intent.action.VIEW" /><data android:scheme="https" /></intent>
+    </queries>
+    <application android:name=".KTMnavApp" android:label="KTMnav" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:supportsRtl="true" android:localeConfig="@xml/locales_config">
+        <activity android:name=".MainActivity" android:exported="true" android:configChanges="uiMode">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+            <intent-filter><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.DEFAULT" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="ktmnav" android:host="settings" /></intent-filter>
+            <!-- Places shared from other apps and geo: links open the Navigate card with the destination filled in. -->
+            <intent-filter><action android:name="android.intent.action.SEND" /><category android:name="android.intent.category.DEFAULT" /><data android:mimeType="text/plain" /></intent-filter>
+            <intent-filter><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.DEFAULT" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="geo" /></intent-filter>
+            <!-- Planned GPX routes from route planners and file managers are imported as routes. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" /><action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" /><data android:scheme="file" /><data android:host="*" />
+                <data android:mimeType="application/gpx+xml" /><data android:mimeType="application/gpx" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" /><data android:scheme="file" /><data android:host="*" />
+                <data android:mimeType="application/octet-stream" /><data android:mimeType="application/xml" /><data android:mimeType="text/xml" />
+                <data android:pathPattern=".*\\.gpx" /><data android:pathPattern=".*\\.GPX" />
+                <data android:pathPattern=".*\\..*\\.gpx" /><data android:pathPattern=".*\\..*\\..*\\.gpx" />
+            </intent-filter>
+        </activity>
+        <service android:name=".backend.BridgeService" android:exported="false" android:foregroundServiceType="connectedDevice|location" />
+        <service android:name=".backend.HandlebarAccessibilityService" android:exported="true"
+            android:label="@string/handlebar_accessibility_name" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/handlebar_accessibility" />
+        </service>
+        <service android:name=".backend.NavListener" android:exported="true" android:label="KTMnav navigation &amp; media"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter><action android:name="android.service.notification.NotificationListenerService" /></intent-filter>
+        </service>
+        <receiver android:name=".backend.AutoConnectReceiver" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.BOOT_COMPLETED" /><action android:name="android.bluetooth.device.action.ACL_CONNECTED" /><action android:name="android.bluetooth.adapter.action.STATE_CHANGED" /></intent-filter>
+        </receiver>
+        <receiver android:name=".backend.BikeDetectedReceiver" android:exported="false" />
+        <provider android:name=".LogProvider" android:authorities="app.ktmnav.logs" android:exported="false" android:grantUriPermissions="true" />
+    </application>
+</manifest>

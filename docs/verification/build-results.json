@@ -1,0 +1,38 @@
+{
+  "apk": "app/build/outputs/apk/debug/app-debug.apk",
+  "size_bytes": 27001873,
+  "sha256": "ac250f7b6afe0cfef8191a4fc68b917cd34b4b0674546068d28bda72977ce136",
+  "JVM": {
+    "tests": 67,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 26
+  },
+  "permissions": [
+    "android.permission.BLUETOOTH_SCAN",
+    "android.permission.BLUETOOTH_CONNECT",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "app.comaps.google.permission.READ_NAVIGATION_DATA",
+    "app.comaps.fdroid.permission.READ_NAVIGATION_DATA",
+    "app.comaps.permission.READ_NAVIGATION_DATA",
+    "app.comaps.huawei.permission.READ_NAVIGATION_DATA"
+  ],
+  "arm64_16K_ELF_alignment": [
+    {
+      "library": "lib/arm64-v8a/libtensorflowlite_jni.so",
+      "PT_LOAD_alignment": [
+        16384,
+        16384,
+        16384
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">Controlli al manubrio di KTMnav</string>
+    <string name="handlebar_accessibility_description">Usa i pulsanti della tua moto Gen 3 abbinata con un tocco, doppio tocco o pressione lunga per scorrere, spostare il focus, selezionare o premere a lungo il controllo evidenziato, oppure tornare indietro sul telefono. Se un controllo non può essere azionato direttamente, KTMnav tocca invece la sua posizione sullo schermo. KTMnav esamina i controlli dello schermo solo per eseguire l\'azione che hai selezionato. Non registra il testo dello schermo, non scrive messaggi, non sblocca il telefono né controlla la moto.</string>
+</resources>

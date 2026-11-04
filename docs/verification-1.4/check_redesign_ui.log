@@ -1,0 +1,26 @@
+ok: KTM: selected navigation and primary button use #FF6600
+ok: KTM: four tabs have compact title + status chip and no marketing headline
+ok: LIGHT: selected navigation and primary button use #FF6600
+ok: LIGHT: four tabs have compact title + status chip and no marketing headline
+ok: HUSQVARNA: selected navigation and primary button use #8AB4F8
+ok: HUSQVARNA: four tabs have compact title + status chip and no marketing headline
+ok: Garage has no "Gen 3 & Gen 2 dashboards" / "encrypted Bluetooth LE" text
+ok: Garage scan section: progress + found list, Pairing help is a link, no Gen paragraphs
+ok: Apps: Google Maps row shows its real PackageManager icon (123 sampled colours)
+ok: Apps: not-installed apps use a neutral monogram, "Not installed" status and a disabled switch
+ok: Apps: one notification-access banner, hidden after cmd notification allow_listener
+ok: Setup: battery item hides after deviceidle whitelist +app.ktmnav and returns after -app.ktmnav
+ok: Settings: 25 fully visible rows, all with an icon tile and >= 48dp (min 60dp)
+ok: Setup complete: Setup hidden on Settings and Ride; Garage lists the saved bike with an Active chip
+ok: Ride: labelled dashboard preview is a secondary action
+ok: 2x text Ride: text within screen width, title visible
+ok: 2x text Garage: text within screen width, title visible
+ok: 2x text Apps: text within screen width, title visible
+ok: 2x text Settings: text within screen width, title visible
+ok: landscape Ride: text within screen width, title visible
+ok: landscape Garage: text within screen width, title visible
+ok: landscape Apps: text within screen width, title visible
+ok: landscape Settings: text within screen width, title visible
+ok: Launcher: adaptive icon renders #FF6600 background with the dark navigation mark
+ok: no app crash
+PASS: 25 redesign checks; screenshots in /private/tmp/claude-501/-Users-checkred-admin-Projects-KTMnav/d005105f-c8ec-48c9-bcde-6f46ba7e0e66/scratchpad/work/ui2/docs/verification-1.4/ui

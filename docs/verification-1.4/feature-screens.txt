@@ -1,0 +1,13 @@
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 0
+PASS: feature screens and dictionaries
+6216 checks
+

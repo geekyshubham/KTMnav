@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "fixture": "synthetic Kurviger-format notification; not vendor runtime traffic",
+  "received_fields": [
+    "10:42",
+    "12.4 km",
+    "250 m",
+    "DISCONNECTED",
+    "KURVIGER",
+    "Lakeside Road"
+  ],
+  "disabled_source_clears_existing_route": true,
+  "disabled_source_ignores_new_updates": true,
+  "reenabled_source_receives_update": true,
+  "notification_removal_clears_route": true,
+  "physical_motorcycle_tested": false,
+  "private_maneuver_capture_png_count": 1
+}

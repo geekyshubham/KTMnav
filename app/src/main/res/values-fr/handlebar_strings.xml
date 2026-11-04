@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">Commandes au guidon KTMnav</string>
+    <string name="handlebar_accessibility_description">Utilisez les boutons de votre moto Gen 3 appairée, par toucher, double toucher ou appui long, pour faire défiler, déplacer le focus, sélectionner ou maintenir appuyé l\'élément ciblé, ou revenir en arrière sur votre téléphone. Si une commande ne peut pas être actionnée directement, KTMnav touche à la place sa position à l\'écran. KTMnav examine les commandes de l\'écran uniquement pour exécuter l\'action que vous avez choisie. Il n\'enregistre pas le texte de l\'écran, ne saisit pas de messages, ne déverrouille pas le téléphone et ne commande pas la moto.</string>
+</resources>

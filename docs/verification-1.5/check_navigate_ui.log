@@ -1,0 +1,14 @@
+ok: Ride: Navigate card with destination field, app button (Google Maps) and Go
+ok: Ride: Go handed "Nandi Hills" to Google Maps (google.navigation intent resolved and started)
+ok: Ride: the destination appears under Recent after it was started
+ok: Ride: navigation app chooser lists the installed apps and whether turns reach the dashboard
+ok: Ride: Home favourite saved from the card and shown as a chip
+ok: Ride: a geo: link sent to KTMnav prefills the destination field
+ok: Garage: every saved bike shows a silhouette tile (naked, adventure and scrambler guessed from their names)
+ok: Garage: Motorcycle model picker stores the chosen model and the row shows it
+ok: Apps: not-installed apps show bundled icons (10 on one screen), Waze and Mapy.cz listed, launch-only apps chipped
+ok: Settings: Navigation group with app choice, two-wheeler routing, favourites and clear recents
+ok: Rides: a GPX opened with KTMnav is imported and its route sheet offers "Navigate this route"
+ok: Rides: Navigate this route started Google Maps with the directions link
+ok: Rides: Planned routes group lists the imported route and offers Import GPX route
+PASS: 13 navigate/garage/apps checks; screenshots in docs/verification-1.5/navigate-ui

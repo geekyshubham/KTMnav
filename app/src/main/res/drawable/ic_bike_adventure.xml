@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="48" android:viewportHeight="48">
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M31 9.5L35 8.5L36.5 18.5L31.5 18.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M33 19.5L41 22.5L40 26L33.5 24.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M18 20L22 15L31 15L35 19.5L34.5 25L25 26L18 26Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M8 18.5L18 20L18 25L10 24Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M3.5 23.5L10.5 23.5L10.5 31L3.5 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M21 26L33 26L33 32L22 33Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M31 18.5L35 18.5L39.5 30L36.5 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M13 26L22 26L22 29L12.5 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M3.5 32a7.5 7.5 0 1 0 15.0 0a7.5 7.5 0 1 0 -15.0 0ZM7.5 32a3.5 3.5 0 1 0 7.0 0a3.5 3.5 0 1 0 -7.0 0Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M29.5 32a7.5 7.5 0 1 0 15.0 0a7.5 7.5 0 1 0 -15.0 0ZM33.5 32a3.5 3.5 0 1 0 7.0 0a3.5 3.5 0 1 0 -7.0 0Z" />
+</vector>

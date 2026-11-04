@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">Controles del manillar de KTMnav</string>
+    <string name="handlebar_accessibility_description">Usa los botones de tu moto Gen 3 emparejada con un toque, doble toque o pulsación larga para desplazarte, mover el foco, seleccionar o mantener pulsado el control enfocado, o retroceder en tu teléfono. Si un control no se puede accionar directamente, KTMnav toca su posición en la pantalla. KTMnav examina los controles de la pantalla solo para realizar la acción que hayas elegido. No graba el texto de la pantalla, no escribe mensajes, no desbloquea el teléfono ni controla la moto.</string>
+</resources>

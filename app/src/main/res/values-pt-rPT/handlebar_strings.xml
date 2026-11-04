@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">Controlos de guiador KTMnav</string>
+    <string name="handlebar_accessibility_description">Usa os botões da tua mota Gen 3 emparelhada com toque, toque duplo ou toque longo para deslizar, mover o foco, selecionar ou premir longamente o controlo em foco, ou recuar no teu telemóvel. Se um controlo não puder ser operado diretamente, o KTMnav toca na posição dele no ecrã. O KTMnav examina os controlos do ecrã apenas para executar a ação que selecionaste. Não grava o texto do ecrã, não escreve mensagens, não desbloqueia o telemóvel nem controla a mota.</string>
+</resources>

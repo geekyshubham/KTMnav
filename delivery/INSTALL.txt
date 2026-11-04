@@ -1,0 +1,20 @@
+KTMnav 1.4 — Android companion
+
+Install KTMnav-1.4-debug.apk on Android 12L (API 32) or later. This is a debug-signed evaluation build, not a production store release. Version 1.4 is the 1.3 feature set with a redesigned interface. Versions 1.0 to 1.2 contain a Gen 3 handshake bug; use 1.3 or later on the motorcycle.
+
+1. Open KTMnav and allow Nearby devices.
+2. For notification-based navigation and media, enable KTMnav in Android Notification access. Locus and CoMaps use direct data interfaces; CoMaps also requires its navigation-data permission.
+3. In Garage, scan and select your motorcycle. Gen 3 uses encrypted BLE: open the motorcycle dashboard Bluetooth menu for first pairing. Gen 2 uses Classic Bluetooth: pair in Android settings and enable Navigation on the dash.
+4. Start navigation in a supported app, then connect. Android permissions, pairing and any bike-side module must be present; an APK cannot pre-grant or replace these.
+
+Every implemented KTMnav feature is included without billing or accounts. Navigation apps retain their own licensing. No server or API key is required.
+
+Settings > Riding features has messages on the dashboard (opt-in), calls (SET answers, BACK silences), ride tools (turn beeper, overspeed alert, GPX rides, waypoint), the read-only OBD-II adapter and the dashboard symbol test. Each stays off until you turn it on; location and phone permissions are requested only when you enable those features. On a first ride, open the symbol test while parked to see which icons your dashboard shows.
+
+Settings > Handlebar button mappings assigns phone actions (Back, scroll, focus/select, media, volume, open KTMnav) to real Gen 3 UP/DOWN/SET/BACK presses, with tap, double tap and long press, and Music/Controller/Custom/Off modes (long-press UP changes mode). Screen actions need Android Accessibility access; for a side-loaded APK, first open App info > More > Allow restricted settings. Media actions need Notification access. Settings > Included features lists the TurnIt Pro features (navigation integrations, multiple bikes, low-power background sync), all included.
+
+Settings > Gen 3 button lab is a PHONE-ONLY SIMULATION. UP/DOWN/SET/BACK control a local menu preview and send no commands to the motorcycle. Phone-operated cruise control is not implemented: no supported cruise/control command was found in the supplied protocol. User target: the first Gen 3 Duke 390 launched in India in 2023; compatibility with its actual firmware/hardware is not yet established.
+
+No physical motorcycle was connected during validation. BLE authentication, actual dashboard rendering, firmware timing, ignition-cycle reconnection and live vendor-app behavior need device/hardware validation. See docs/VERIFICATION.md and docs/FEATURES.md inside the source archive.
+
+Build the source with JDK 17 and Android SDK 36. Set sdk.dir in local.properties or ANDROID_HOME, then run ./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug. The source includes the Gradle wrapper, app, emulator test fixture, local model/font/licenses, design system and verification scripts. It excludes the original decompilation/APK, build caches, accounts, local SDK paths and credentials.

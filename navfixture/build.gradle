@@ -1,0 +1,8 @@
+// Emulator-only navigation notification producer. Never include this APK in delivery.
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.ktmnav.fixture'
+    compileSdk 36
+    defaultConfig { applicationId 'com.kurviger.app'; minSdk 32; targetSdk 36; versionCode 1; versionName 'fixture' }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

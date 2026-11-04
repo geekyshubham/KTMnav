@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "count": 25,
+  "checks": [
+    "KTM: selected navigation and primary button use #FF6600",
+    "KTM: four tabs have compact title + status chip and no marketing headline",
+    "LIGHT: selected navigation and primary button use #FF6600",
+    "LIGHT: four tabs have compact title + status chip and no marketing headline",
+    "HUSQVARNA: selected navigation and primary button use #8AB4F8",
+    "HUSQVARNA: four tabs have compact title + status chip and no marketing headline",
+    "Garage has no \"Gen 3 & Gen 2 dashboards\" / \"encrypted Bluetooth LE\" text",
+    "Garage scan section: progress + found list, Pairing help is a link, no Gen paragraphs",
+    "Apps: Google Maps row shows its real PackageManager icon (123 sampled colours)",
+    "Apps: not-installed apps use a neutral monogram, \"Not installed\" status and a disabled switch",
+    "Apps: one notification-access banner, hidden after cmd notification allow_listener",
+    "Setup: battery item hides after deviceidle whitelist +app.ktmnav and returns after -app.ktmnav",
+    "Settings: 25 fully visible rows, all with an icon tile and >= 48dp (min 60dp)",
+    "Setup complete: Setup hidden on Settings and Ride; Garage lists the saved bike with an Active chip",
+    "Ride: labelled dashboard preview is a secondary action",
+    "2x text Ride: text within screen width, title visible",
+    "2x text Garage: text within screen width, title visible",
+    "2x text Apps: text within screen width, title visible",
+    "2x text Settings: text within screen width, title visible",
+    "landscape Ride: text within screen width, title visible",
+    "landscape Garage: text within screen width, title visible",
+    "landscape Apps: text within screen width, title visible",
+    "landscape Settings: text within screen width, title visible",
+    "Launcher: adaptive icon renders #FF6600 background with the dark navigation mark",
+    "no app crash"
+  ],
+  "evidence": {
+    "brand": [
+      {
+        "theme": "KTM",
+        "nav_pill_rgb": [
+          255,
+          102,
+          0
+        ],
+        "primary_button_rgb": [
+          255,
+          102,
+          0
+        ]
+      },
+      {
+        "theme": "LIGHT",
+        "nav_pill_rgb": [
+          255,
+          102,
+          0
+        ],
+        "primary_button_rgb": [
+          255,
+          102,
+          0
+        ]
+      },
+      {
+        "theme": "HUSQVARNA",
+        "nav_pill_rgb": [
+          138,
+          180,
+          248
+        ],
+        "primary_button_rgb": [
+          138,
+          180,
+          248
+        ]
+      }
+    ],
+    "google_maps_icon_colours": 123,
+    "settings_rows_dp": {
+      "Keep bridge in background": 60,
+      "Auto-connect": 60,
+      "Wait before low-power scan": 60,
+      "Idle display": 60,
+      "Custom dashboard message": 60,
+      "Welcome name": 60,
+      "Scroll long dashboard messages": 60,
+      "Dashboard data & controls": 60,
+      "Messages on dashboard": 60,
+      "Calls": 60,
+      "Ride tools": 60,
+      "Rides": 60,
+      "OBD-II adapter (read-only)": 60,
+      "Dashboard symbol test & calibration": 60,
+      "Handlebar button mappings": 60,
+      "Gen 3 button lab": 60,
+      "Theme": 60,
+      "App language": 60,
+      "Included features": 60,
+      "Compatibility & navigation help": 60,
+      "View connection log": 60,
+      "Share diagnostic log": 60,
+      "Capture maneuver arrows": 60,
+      "Open-source licenses": 60,
+      "About KTMnav": 60
+    },
+    "launcher_icon": {
+      "bounds": [
+        293,
+        1370,
+        540,
+        1685
+      ],
+      "ff6600_samples": 3997,
+      "dark_mark_samples": 788
+    }
+  },
+  "physical_bike_tested": false,
+  "note": "Saved bike is a synthetic preference entry (02:00:00:00:14:01); no motorcycle connection was made."
+}

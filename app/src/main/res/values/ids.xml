@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="app_icon_real" type="id" />
+    <item name="app_icon_monogram" type="id" />
+    <item name="settings_row" type="id" />
+    <item name="row_icon" type="id" />
+    <item name="setup_card" type="id" />
+    <item name="setup_item" type="id" />
+    <item name="status_chip" type="id" />
+    <item name="primary_action" type="id" />
+    <item name="nav_tab" type="id" />
+    <item name="access_banner" type="id" />
+    <item name="now_forwarding" type="id" />
+    <item name="tab_title" type="id" />
+    <item name="app_icon_bundled" type="id" />
+    <item name="navigate_card" type="id" />
+    <item name="navigate_field" type="id" />
+    <item name="navigate_go" type="id" />
+    <item name="navigate_app" type="id" />
+    <item name="bike_icon" type="id" />
+    <item name="route_row" type="id" />
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">KTMnav handlebar controls</string>
+    <string name="handlebar_accessibility_description">Use your paired Gen 3 motorcycle’s buttons with a tap, double tap or long press to scroll, move focus, select or long-press the focused control, or go back on your phone. If a control cannot be operated directly, KTMnav touches its position on the screen instead. KTMnav examines screen controls only to perform your selected action. It does not record screen text, type messages, unlock the phone, or control the motorcycle.</string>
+</resources>

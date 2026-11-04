@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="48" android:viewportHeight="48">
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M29 16.5L41.5 16.5L42.5 19.5L30 19.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M8 17L30 17L34 21L30 23L10 22Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M22 13.5L30 13.5L31 17L22 17Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M4.5 17.5L9 16.5L10 21L5.5 21.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M19 23L28 23L28 30L21 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M31 17L34 17L39.5 30L36.5 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M12 26L21 26L21.5 29L12 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M4 32a7 7 0 1 0 14 0a7 7 0 1 0 -14 0ZM8 32a3 3 0 1 0 6 0a3 3 0 1 0 -6 0Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M30 32a7 7 0 1 0 14 0a7 7 0 1 0 -14 0ZM34 32a3 3 0 1 0 6 0a3 3 0 1 0 -6 0Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M18.20 32.90L20.00 32.90L20.00 31.10L18.20 31.10ZM16.30 36.96L17.75 38.02L18.81 36.56L17.35 35.50ZM12.37 39.13L12.93 40.84L14.64 40.28L14.08 38.57ZM7.92 38.57L7.36 40.28L9.07 40.84L9.63 39.13ZM4.65 35.50L3.19 36.56L4.25 38.02L5.70 36.96ZM3.80 31.10L2.00 31.10L2.00 32.90L3.80 32.90ZM5.70 27.04L4.25 25.98L3.19 27.44L4.65 28.50ZM9.63 24.87L9.07 23.16L7.36 23.72L7.92 25.43ZM14.08 25.43L14.64 23.72L12.93 23.16L12.37 24.87ZM17.35 28.50L18.81 27.44L17.75 25.98L16.30 27.04Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M44.20 32.90L46.00 32.90L46.00 31.10L44.20 31.10ZM42.30 36.96L43.75 38.02L44.81 36.56L43.35 35.50ZM38.37 39.13L38.93 40.84L40.64 40.28L40.08 38.57ZM33.92 38.57L33.36 40.28L35.07 40.84L35.63 39.13ZM30.65 35.50L29.19 36.56L30.25 38.02L31.70 36.96ZM29.80 31.10L28.00 31.10L28.00 32.90L29.80 32.90ZM31.70 27.04L30.25 25.98L29.19 27.44L30.65 28.50ZM35.63 24.87L35.07 23.16L33.36 23.72L33.92 25.43ZM40.08 25.43L40.64 23.72L38.93 23.16L38.37 24.87ZM43.35 28.50L44.81 27.44L43.75 25.98L42.30 27.04Z" />
+</vector>

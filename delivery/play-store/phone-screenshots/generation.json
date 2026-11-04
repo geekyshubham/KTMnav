@@ -1,0 +1,28 @@
+{
+  "tool": "fastlane frameit 2.241.1",
+  "repository": "https://github.com/fastlane/fastlane",
+  "source": "Fresh Android emulator captures of app.ktmnav 1.4.1",
+  "resizing": "Proportional contain with side padding; screen contents unchanged",
+  "images": [
+    {
+      "file": "01-navigation.png",
+      "dimensions": "1080x1920",
+      "sha256": "aafa3e42d71037b7b82d2f408a9d7b8e96968cab3cfa63a57509de7fa200ccb8"
+    },
+    {
+      "file": "02-garage.png",
+      "dimensions": "1080x1920",
+      "sha256": "564cd7bd40337275d6aa938f411d99b0eaf773fd605a9e46cf5a5a3e9eb0d979"
+    },
+    {
+      "file": "03-navigation-apps.png",
+      "dimensions": "1080x1920",
+      "sha256": "ba8f0bfafe5452d8356ecd42212568ef00e7469b62532fb09cf299ed34ad7d10"
+    },
+    {
+      "file": "04-handlebar.png",
+      "dimensions": "1080x1920",
+      "sha256": "c01916ae9717a6db4956c34f1f8a8c12b4fd4435fe511a6b30ce92b4eb9e660c"
+    }
+  ]
+}

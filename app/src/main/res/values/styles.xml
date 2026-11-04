@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#FF6600</item>
+        <item name="android:colorControlActivated">#FF6600</item>
+        <item name="android:colorBackgroundFloating">#191D20</item>
+        <item name="android:alertDialogTheme">@style/KtmDialog</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#101214</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="AppThemeHusqvarna" parent="AppTheme">
+        <item name="android:colorAccent">#8AB4F8</item>
+        <item name="android:colorControlActivated">#8AB4F8</item>
+        <item name="android:alertDialogTheme">@style/KtmDialog.Husqvarna</item>
+    </style>
+    <style name="AppThemeLight" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#C24E00</item>
+        <item name="android:colorControlActivated">#E65C00</item>
+        <item name="android:colorBackgroundFloating">#FFFFFF</item>
+        <item name="android:alertDialogTheme">@style/KtmDialog.Light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">#F4F5F6</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="KtmDialogButton" parent="android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="KtmDialog" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">#FF6600</item>
+        <item name="android:colorControlActivated">#FF6600</item>
+        <item name="android:colorBackground">#191D20</item>
+        <item name="android:colorBackgroundFloating">#191D20</item>
+        <item name="android:windowBackground">@drawable/dialog_background_dark</item>
+        <item name="android:buttonBarButtonStyle">@style/KtmDialogButton</item>
+    </style>
+    <style name="KtmDialog.Husqvarna">
+        <item name="android:colorAccent">#8AB4F8</item>
+        <item name="android:colorControlActivated">#8AB4F8</item>
+    </style>
+    <style name="KtmDialog.Light" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">#C24E00</item>
+        <item name="android:colorControlActivated">#E65C00</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="android:colorBackgroundFloating">#FFFFFF</item>
+        <item name="android:windowBackground">@drawable/dialog_background_light</item>
+        <item name="android:buttonBarButtonStyle">@style/KtmDialogButton</item>
+    </style>
+</resources>

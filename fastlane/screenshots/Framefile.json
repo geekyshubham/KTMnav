@@ -1,0 +1,62 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "background": "../../delivery/play-store/artwork/background.png",
+    "keyword": {
+      "font": "../../app/src/main/assets/fonts/chakra_petch_semibold.ttf",
+      "font_size": 32,
+      "color": "#FF6600"
+    },
+    "title": {
+      "font": "../../app/src/main/assets/fonts/chakra_petch_bold.ttf",
+      "font_size": 76,
+      "color": "#F2F4F5"
+    },
+    "padding": "64x64",
+    "title_min_height": 390,
+    "stack_title": true,
+    "show_complete_frame": true,
+    "title_below_image": false,
+    "frame": "JUST_BLACK",
+    "force_device_type": "Google Pixel 5",
+    "use_platform": "ANDROID"
+  },
+  "data": [
+    {
+      "filter": "01-navigation",
+      "keyword": {
+        "text": "KTM NAV \u00b7 TURN-BY-TURN"
+      },
+      "title": {
+        "text": "Your next turn.\\nRight on the dash."
+      }
+    },
+    {
+      "filter": "02-garage",
+      "keyword": {
+        "text": "KTM NAV \u00b7 YOUR GARAGE"
+      },
+      "title": {
+        "text": "One garage.\\nEvery ride."
+      }
+    },
+    {
+      "filter": "03-navigation-apps",
+      "keyword": {
+        "text": "KTM NAV \u00b7 NAVIGATION APPS"
+      },
+      "title": {
+        "text": "Choose your\\nnavigation app."
+      }
+    },
+    {
+      "filter": "04-handlebar",
+      "keyword": {
+        "text": "KTM NAV \u00b7 HANDLEBAR CONTROLS"
+      },
+      "title": {
+        "text": "Your buttons.\\nYour shortcuts."
+      }
+    }
+  ]
+}

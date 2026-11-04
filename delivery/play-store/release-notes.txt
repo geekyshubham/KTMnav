@@ -1,0 +1,2 @@
+Initial Google Play test release.
+Navigation forwarding for compatible Gen 2 and Gen 3 dashboards, motorcycle management, configurable handlebar controls, optional ride tools, and in-app privacy policy.

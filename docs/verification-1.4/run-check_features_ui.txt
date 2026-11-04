@@ -1,0 +1,50 @@
+ok: Settings entry: Messages on dashboard
+ok: Settings entry: Calls
+ok: Settings entry: Ride tools
+ok: Settings entry: OBD-II adapter (read-only)
+ok: Settings entry: Dashboard symbol test & calibration
+ok: concise messages privacy disclosure at the opt-in switch
+ok: message privacy opt-in confirmation
+ok: Notification access needed
+ok: per-app allowlist shows install state
+ok: Not muted
+ok: quick mute shows remaining time
+ok: unmute clears quiet time
+ok: send test disabled with reason while disconnected
+ok: SET answers, BACK silences.
+ok: phone permission status shown
+ok: phone permission disclosure precedes Android prompt
+ok: denied phone permission keeps status
+ok: Button mode: Custom
+ok: single-press row keeps legacy label
+ok: unassigned long press falls back to tap
+ok: mode selector switches to Music preset
+ok: Assignments in this mode
+ok: UP · Volume up
+ok: Button mode: Custom
+ok: preferred navigation app chooser
+ok: screen-control disclosure mentions long press and touch fallback
+ok: location permission status shown
+ok: Allow location access
+ok: location disclosure before Android prompt
+ok: rides empty state with guidance
+ok: ride detail legend
+ok: Under 30 km/h
+ok: 90 km/h and faster
+ok: delete ride confirmation
+ok: ride deleted after confirmation
+ok: OBD explains 6-pin lead and ELM327
+ok: OBD read-only statement
+ok: Turn on the OBD-II adapter switch to scan, connect and read data.
+ok: scan shows loading state
+ok: live data pause/resume
+ok: unverified gear profile marked
+ok: Connect a Gen 3 motorcycle to show symbols on the dashboard.
+ok: GO_STRAIGHT
+ok: ID 2
+ok: INFORMATION
+ok: calibration empty state
+ok: No saved calibrations.
+ok: About shows version 1.4
+ok: German translation shown in Messages screen
+PASS: 75 feature UI checks; screenshots in /Users/checkred_admin/Projects/KTMnav/docs/verification-1.4/features-ui

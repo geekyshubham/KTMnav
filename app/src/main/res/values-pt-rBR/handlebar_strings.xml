@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">Controles do guidão do KTMnav</string>
+    <string name="handlebar_accessibility_description">Use os botões da sua moto Gen 3 pareada com toque, toque duplo ou toque longo para rolar, mover o foco, selecionar ou pressionar longamente o controle em foco, ou voltar no seu celular. Se um controle não puder ser operado diretamente, o KTMnav toca na posição dele na tela. O KTMnav examina os controles da tela apenas para executar a ação que você selecionou. Ele não grava o texto da tela, não digita mensagens, não desbloqueia o celular nem controla a moto.</string>
+</resources>

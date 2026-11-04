@@ -1,0 +1,57 @@
+{
+  "text_contrast_ratios": {
+    "dark": {
+      "text": {
+        "#101214": 17.02,
+        "#191D20": 15.38,
+        "#22272B": 13.66
+      },
+      "muted": {
+        "#101214": 8.98,
+        "#191D20": 8.11,
+        "#22272B": 7.21
+      },
+      "accent": {
+        "#101214": 8.75,
+        "#191D20": 7.91,
+        "#22272B": 7.03
+      }
+    },
+    "daylight": {
+      "text": {
+        "#F4F5F6": 15.87,
+        "#FFFFFF": 17.33,
+        "#E8ECEF": 14.58
+      },
+      "muted": {
+        "#F4F5F6": 6.41,
+        "#FFFFFF": 7.0,
+        "#E8ECEF": 5.89
+      },
+      "accent": {
+        "#F4F5F6": 5.37,
+        "#FFFFFF": 5.87,
+        "#E8ECEF": 4.94
+      }
+    },
+    "husqvarna": {
+      "text": {
+        "#101214": 17.02,
+        "#191D20": 15.38,
+        "#22272B": 13.66
+      },
+      "muted": {
+        "#101214": 8.98,
+        "#191D20": 8.11,
+        "#22272B": 7.21
+      },
+      "accent": {
+        "#101214": 8.91,
+        "#191D20": 8.05,
+        "#22272B": 7.15
+      }
+    }
+  },
+  "minimum_normal_text_ratio": 4.5,
+  "scope": "Static theme token combinations; excludes disabled controls, system dialogs and complete accessibility audit."
+}

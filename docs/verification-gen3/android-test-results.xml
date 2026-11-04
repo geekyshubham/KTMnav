@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="app.ktmnav.SmokeInstrumentation" tests="1" failures="0" errors="0" skipped="0" time="11.088" timestamp="2026-10-20T17:26:15" hostname="localhost">
+  <properties>
+    <property name="device" value="KTMnav_API36(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="testProtocolAndBikeLifecycle" classname="app.ktmnav.SmokeInstrumentation" time="0.645" />
+</testsuite>

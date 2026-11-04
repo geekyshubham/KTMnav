@@ -1,0 +1,35 @@
+App name: KTM Nav
+Package: app.ktmnav
+Category: Maps & Navigation
+Price: Free
+Support: takankhar@gmail.com
+
+SHORT DESCRIPTION
+Navigation and ride tools for compatible KTM and Husqvarna dashboards.
+
+FULL DESCRIPTION
+KTM Nav is an independent companion for compatible KTM and Husqvarna motorcycle dashboards. Forward turn guidance from supported navigation apps over Bluetooth, manage your motorcycles, and choose optional ride and handlebar features.
+
+NAVIGATION ON YOUR DASHBOARD
+Connect a supported Gen 2 or Gen 3 dashboard and start navigation in a supported app. KTM Nav reads available navigation notifications or supported app data and forwards guidance to your connected motorcycle. Compatibility depends on your dashboard generation, firmware, and navigation app.
+
+YOUR MOTORCYCLES, YOUR SETTINGS
+Save multiple motorcycles in Garage, choose your preferred navigation app, configure reconnection, and select a dark orange, blue, or daylight theme. A clearly labeled phone preview is available before connecting a bike.
+
+OPTIONAL RIDING FEATURES
+Record GPX rides locally, view ride statistics, set a speed alert, save a waypoint, and enable turn sounds. A compatible ELM327 adapter can provide read-only OBD-II information.
+
+GEN 3 HANDLEBAR CONTROLS
+Map supported handlebar buttons to media and phone actions, including tap, double tap, and long press. Optional call controls can answer or silence ringing calls. Optional message and track banners can appear on your connected dashboard.
+
+PERMISSIONS AND PRIVACY
+Notification access enables navigation and media forwarding. Optional message mirroring, location-based ride tools, phone controls, and Bluetooth features require the relevant Android permissions. Optional screen controls use Android's AccessibilityService API to inspect on-screen controls and perform scrolling, focus, selection, long press, and Back in response to your mapped handlebar presses. KTM Nav is not an accessibility tool for people with disabilities. Screen content is not recorded or uploaded.
+
+No accounts, ads, subscriptions, analytics, or hosted backend. Processing happens on your phone; enabled dashboard features send their information to your paired motorcycle over Bluetooth. GPX rides and diagnostics are shared only when you choose to export them.
+
+REQUIREMENTS
+Android 12L or newer and a compatible motorcycle dashboard for live forwarding. Set up pairing and permissions while parked. Features depend on hardware, firmware, permissions, and supported third-party apps. Navigation apps may have their own fees or subscriptions. KTM Nav does not provide vehicle control or cruise control.
+
+KTM Nav is not affiliated with, endorsed by, or sponsored by KTM or Husqvarna. Product names and trademarks belong to their respective owners.
+
+Support: takankhar@gmail.com

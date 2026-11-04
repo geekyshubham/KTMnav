@@ -1,0 +1,57 @@
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 0
+PASS: missing-access checks
+Screen access starts disconnected when Android has not enabled service
+Mapped Back reports missing access instead of performing screen action
+Mapped media reports missing notification access
+
+
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 0
+PASS: real Android handlebar-action checks
+Saved mapping resolves through production code
+Unsupported action is rejected
+Scroll down result: Scrolled down
+Mapped SCROLL_DOWN changes actual scroll position
+Scroll up result: Scrolled up
+Mapped SCROLL_UP returns actual view to top
+Next focus result: Focused next element
+Select result: Clicked focused element
+Mapped SELECT activates focused control exactly once
+Previous focus result: Focused previous element
+Mapped previous focus restores actual control focus
+Android Back result: Back performed
+Mapped BACK dismisses Android dialog
+MEDIA_PLAY_PAUSE: Media command sent: Play / pause
+MEDIA_NEXT: Media command sent: Next track
+MEDIA_PREVIOUS: Media command sent: Previous track
+Mapped media play/pause, next and previous reach real session callbacks
+Volume up: Volume increased
+Mapped volume up changes music stream volume
+Volume down: Volume decreased
+Mapped volume down restores music stream volume
+Production Bridge attaches real button action listener
+Encrypted RCM frames deliver every rising edge in order; held buttons do not repeat
+Received UP/DOWN mappings execute actual volume actions through Bridge
+RSSI refresh does not replay a handlebar action
+Disabling custom mappings prevents received UP action execution
+Disconnect cancels queued old-transport button actions
+No physical motorcycle connected; no vehicle commands sent.
+
+

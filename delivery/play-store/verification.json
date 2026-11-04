@@ -1,0 +1,10 @@
+{
+  "applicationId": "app.ktmnav",
+  "versionName": "1.4.1",
+  "versionCode": "6",
+  "unitTests": 403,
+  "testFailures": 0,
+  "testErrors": 0,
+  "internetPermission": false,
+  "bundleSha256": "fbe01f4baecf8bb2e3a9c0bd92884d19d24e1aa5467fba15e5adf6ecbb320166"
+}

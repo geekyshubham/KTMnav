@@ -1,0 +1,21 @@
+Ride: Navigate card with destination field, app button (Google Maps) and Go
+Ride: Go handed "Nandi Hills" to Google Maps (google.navigation intent resolved and started)
+Ride: the destination appears under Recent after it was started
+Ride: navigation app chooser lists the installed apps and whether turns reach the dashboard
+Ride: Home favourite saved from the card and shown as a chip
+Ride: a geo: link sent to KTMnav prefills the destination field
+Garage: every saved bike shows a silhouette tile (naked, adventure and scrambler guessed from their names)
+Garage: Motorcycle model picker stores the chosen model and the row shows it
+Apps: not-installed apps show bundled icons (10 on one screen), Waze and Mapy.cz listed, launch-only apps chipped
+Settings: Navigation group with app choice, two-wheeler routing, favourites and clear recents
+Rides: a GPX opened with KTMnav is imported and its route sheet offers "Navigate this route"
+Rides: Navigate this route started Google Maps with the directions link
+Rides: Planned routes group lists the imported route and offers Import GPX route
+
+{
+  "google_maps_installed": true,
+  "navigate_app_button": "Google Maps",
+  "foreground_after_go": "com.google.android.apps.maps",
+  "bundled_icons_visible_at_once": 10,
+  "foreground_after_route": "com.google.android.apps.maps"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "Gen3 garage information",
+    "disconnected telemetry empty",
+    "Gen3 pairing help",
+    "local button lab UP/DOWN/SET/BACK",
+    "lab keeps actual bridge disconnected",
+    "German UI selection",
+    "English UI restoration"
+  ],
+  "physical_bike_tested": false,
+  "vehicle_cruise_control": false
+}

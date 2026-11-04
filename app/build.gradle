@@ -1,0 +1,39 @@
+plugins { id 'com.android.application' }
+def releaseSigning = new Properties()
+def releaseSigningFile = rootProject.file('release-signing.properties')
+if (releaseSigningFile.exists()) releaseSigningFile.withInputStream { releaseSigning.load(it) }
+android {
+    namespace 'app.ktmnav'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'app.ktmnav'
+        minSdk 32
+        targetSdk 36
+        versionCode 7
+        versionName '1.5.0'
+        testInstrumentationRunner 'app.ktmnav.SmokeInstrumentation'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    signingConfigs {
+        if (releaseSigningFile.exists()) {
+            release {
+                storeFile rootProject.file(releaseSigning['storeFile'])
+                storePassword releaseSigning['storePassword']
+                keyAlias releaseSigning['keyAlias']
+                keyPassword releaseSigning['keyPassword']
+            }
+        }
+    }
+    buildTypes { release {
+        minifyEnabled false
+        if (releaseSigningFile.exists()) signingConfig signingConfigs.release
+    } }
+    testOptions { unitTests.returnDefaultValues = true }
+}
+dependencies {
+    // Local interpreter for the recovered maneuver classifier. No Play Services or download at runtime.
+    implementation 'com.google.ai.edge.litert:litert:1.4.0'
+    implementation 'com.github.asamm.locus-api:locus-api-android:0.10.1'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+}

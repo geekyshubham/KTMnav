@@ -1,0 +1,15 @@
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 0
+PASS: missing-access checks
+Screen access starts disconnected when Android has not enabled service
+Mapped Back reports missing access instead of performing screen action
+Mapped media reports missing notification access
+

@@ -1,0 +1,1 @@
+PASS: 23 UI assertions; screenshots in /Users/checkred_admin/Projects/KTMnav/docs/verification-1.4/android-ui

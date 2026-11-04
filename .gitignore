@@ -1,0 +1,21 @@
+.tools/
+TurnIt-decompiled/
+*.apks
+.gradle/
+**/build/
+local.properties
+.DS_Store
+worklogs/
+
+worklogs*.jsonl
+.signing/
+release-signing.properties
+*.jks
+*.keystore
+
+# Third-party reference material and build outputs
+RideConnect-decompiled/
+*.xapk
+*.apk
+*.aab
+delivery/**/*.zip

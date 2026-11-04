@@ -1,0 +1,15 @@
+# TurnIt Pro screen coverage in KTMnav 1.2
+
+The supplied APK’s `res/layout/view_pro.xml` advertises exactly three feature groups. Its strings are `pro_feature_sources_*`, `pro_feature_background_*` and `pro_feature_multibike_*`. Purchase and restore controls are billing UI; KTMnav does not import billing, accounts or entitlement checks.
+
+| Advertised group | Recovered evidence | KTMnav implementation and access | Verification boundary |
+|---|---|---|---|
+| TomTom GO, OsmAnd, Kurviger, Calimoto, Organic Maps, Locus Map and CoMaps navigation | `apktool/base/res/values/strings.xml:340-341`, `jadx/sources/turtle/slap/turnit/billing/ProFeatures.java:14`, original notification/direct-data adapters | All seven adapters plus Google Maps; per-source toggles and app launchers in Apps. Locus uses its bundled API and CoMaps requests navigation-data permission. No Pro check. | Parser/icon vectors, SDK loading and synthetic notification delivery tested. Current live vendor-app templates and CoMaps/Locus IPC still require device validation. Offline routes depend on the navigation app’s maps, permissions and licenses. |
+| Low-power background sync | `strings.xml:336-337`, original `IdleBridgeWatcher`, `BikeDetector`, `BikeDetectedReceiver`, `AutoConnectReceiver` | Settings → Keep bridge in background, Auto-connect and low-power wait. Gen 3 retires active waiting and can arm address-filtered BLE detection; Gen 2 waits for matching Classic events. Explicit stop cancels intent. | Android lifecycle/timeout checks pass; motorcycle reconnection, offloaded BLE behavior, firmware and phone battery policies require hardware validation. No zero-battery guarantee. |
+| Multiple bikes | `strings.xml:338-339`, original `MainActivity` multi-bike upsell and `OpenDashBikeLink` storage/rollback | Garage saves/selects/renames/forgets Gen 2 and Gen 3 bikes without a count or entitlement gate; previous pairing is restored after failed provisional pairing. | Actual Android persistence, switching, migration and rollback tests pass. Physical pairing remains unverified. |
+
+Settings → **Included features** links directly to Apps, Garage and connection settings for these groups. The feature page makes no purchase request and contains no restore-purchase control.
+
+The additional handlebar mappings are a new working phone-control implementation using the recovered incoming RCM events. In this supplied artifact, `gamepad_enabled` exists but the accessibility-control class is a plain object with `isRunning=false`, not a declared Android service. It is referenced by the BACK handling branch, but does not implement key remapping itself. The Pro screen does not advertise it. See [handlebar controls](HANDLEBAR-CONTROLS.md) for the new implementation and permission requirements.
+
+This coverage is specific to the supplied TurnIt archive; it does not establish the contents of another release or prove real-bike behavior. Original sources remain unchanged in `TurnIt-decompiled/` in the workspace, excluded from the delivery archive.

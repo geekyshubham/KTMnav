@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handlebar_accessibility_name">KTMnav-Lenkersteuerung</string>
+    <string name="handlebar_accessibility_description">Verwende die Tasten deines gekoppelten Gen 3 Motorrads mit Tippen, Doppeltippen oder langem Drücken, um auf deinem Telefon zu scrollen, den Fokus zu bewegen, das fokussierte Steuerelement auszuwählen oder lang zu drücken oder zurückzugehen. Lässt sich ein Steuerelement nicht direkt bedienen, tippt KTMnav stattdessen auf dessen Position auf dem Bildschirm. KTMnav untersucht Bildschirmelemente nur, um die von dir gewählte Aktion auszuführen. Es zeichnet keinen Bildschirmtext auf, tippt keine Nachrichten, entsperrt das Telefon nicht und steuert das Motorrad nicht.</string>
+</resources>

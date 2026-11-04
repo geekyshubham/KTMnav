@@ -1,0 +1,29 @@
+{
+  "app": "KTM Nav",
+  "package": "app.ktmnav",
+  "consoleAppId": "4976171727444077072",
+  "release": {
+    "versionName": "1.4.1",
+    "versionCode": 6,
+    "track": "internal testing",
+    "status": "Available to internal testers",
+    "testersSelected": false
+  },
+  "screenshots": {
+    "tool": "fastlane frameit 2.241.1",
+    "directory": "phone-screenshots",
+    "order": [
+      "01-navigation.png",
+      "02-garage.png",
+      "03-navigation-apps.png",
+      "04-handlebar.png"
+    ],
+    "dimensions": "1080x1920"
+  },
+  "productionBlockers": [
+    "Public privacy-policy URL deferred by user",
+    "Closed test: 12 testers continuously opted in for 14 days",
+    "Remaining app-content declarations and Google review"
+  ],
+  "publiclyPublished": false
+}

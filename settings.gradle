@@ -1,0 +1,12 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io'; content { includeGroup 'com.github.asamm.locus-api'; includeModule 'com.github.asamm', 'logger-asamm' } }
+    }
+}
+rootProject.name = 'KTMnav'
+include ':app'
+include ':navfixture'

@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="48" android:viewportHeight="48">
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M15 24L19 19L27 17L33 18L36 22L34 26L25 27L17 28Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M7 20.5L15 21.5L15.5 25L9 24Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M29.5 13.5L36 12L36.5 14L30.5 15.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M31 15L34 15L35 18L32 18.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M34 19L39.5 21L38.5 24.5L33.5 23Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M20 27L31.5 27L32 32L22 33Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M22 31L31 30L31.5 33L23 34Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M31.5 17.5L35 16.5L39.5 29.5L36.5 30.5Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M13 26L22 26L22 29L12.5 31Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M3.5 32a7.5 7.5 0 1 0 15.0 0a7.5 7.5 0 1 0 -15.0 0ZM7.5 32a3.5 3.5 0 1 0 7.0 0a3.5 3.5 0 1 0 -7.0 0Z" />
+    <path android:fillColor="@android:color/white" android:fillType="evenOdd" android:pathData="M29.5 32a7.5 7.5 0 1 0 15.0 0a7.5 7.5 0 1 0 -15.0 0ZM33.5 32a3.5 3.5 0 1 0 7.0 0a3.5 3.5 0 1 0 -7.0 0Z" />
+</vector>

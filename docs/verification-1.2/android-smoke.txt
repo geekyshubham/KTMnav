@@ -1,0 +1,12 @@
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.ktmnav.SmokeInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=testProtocolAndBikeLifecycle
+INSTRUMENTATION_STATUS_CODE: 0
+PASS: bundled model inference, Locus SDK, NIST AES, Gen 3 payload, Gen 2 frame, saved bikes, GEN1-to-GEN3 migration preserving pairing keys, millisecond background wait, passive suspension preserves intent, explicit stop cancels intent, no fabricated telemetry, seven language dictionaries, Activity launch
+
