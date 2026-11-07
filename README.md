@@ -1,101 +1,245 @@
+<div align="center">
+
+<img src="docs/media/ktmnav-icon.png" width="112" alt="KTMnav app icon: a black navigation arrow on a KTM-orange tile">
+
 # KTMnav
 
-An independent Android companion that forwards navigation to compatible KTM and Husqvarna motorcycle dashboards. All implemented features are available without billing, accounts, subscriptions, or a hosted backend.
+### Turn-by-turn navigation on your KTM &amp; Husqvarna TFT dashboard
 
-## Version 1.5
+A free Android app that sends turn-by-turn directions from **Google Maps, Waze, OsmAnd, Kurviger, Calimoto** and more to compatible **KTM and Husqvarna** motorcycle dashboards over Bluetooth. It also includes handlebar shortcuts, call control, GPX ride recording and read-only OBD-II.
 
-Version 1.5 ports the connection handling and the rider-facing extras of the decompiled RideConnect app (`RideConnect-decompiled/`, v0.0.7) and adds navigation that starts from KTMnav itself:
+**No accounts. No ads. No subscriptions. No cloud.**
 
-- **Connectivity:** an authenticated Gen 3 link that drops is retried directly on the retained address after 0.5, 1.5 and 3 s before the scan-then-settle search runs, so a short blip recovers in about a second instead of twelve. The handshake restarts in place when the dash re-sends its opening nonce and asks the dash to re-pair in place when it selects a key this phone does not have, instead of cooling down for 15 to 45 s. Dashboard text and icon characteristics are written without response and can no longer tear the link down on a slow callback; control writes and subscriptions are retried up to three times. Device-information, VIN, unknown-service and telemetry probing now start 3 s after authentication so the first turn is never queued behind them. Keepalive key re-selections are answered at most once per 200 ms. See [the RideConnect port report](docs/RIDECONNECT-PORT-1.5.md).
-- **Navigate from KTMnav:** the Ride tab gets a destination field. Type a place, an address, coordinates or a Google Maps link, pick the navigation app and tap Go; turn-by-turn guidance starts there and reaches the dashboard as before. Favourites (Home, Work, more), recent destinations, places shared from other apps, `geo:` links and an optional two-wheeler routing mode for Google Maps are included. The chosen app also serves the handlebar long-press shortcut.
-- **Planned routes:** GPX files from Kurviger, Calimoto or any planner can be imported in Rides or opened from a file manager; a route can be started in the chosen app (Google Maps receives the start, up to nine of the sharpest bends and the end).
-- **Waze** notifications are now forwarded to the dashboard. HERE WeGo, Sygic and Mapy.cz can be started from KTMnav but do not forward turns.
-- **Icons:** every supported navigation app has a bundled icon when it is not installed (the real app icon is used when it is), and Garage shows a motorcycle silhouette per style; the model or style is chosen per bike and guessed from the dashboard name otherwise.
+![Android 12L+](https://img.shields.io/badge/Android-12L%2B-FF6600?style=for-the-badge&logo=android&logoColor=white&labelColor=101214)
+![Version 1.5.0](https://img.shields.io/badge/version-1.5.0-FF6600?style=for-the-badge&labelColor=101214)
+![Gen 2 and Gen 3 TFT](https://img.shields.io/badge/dashboards-Gen%202%20%7C%20Gen%203-FF6600?style=for-the-badge&labelColor=101214)
+![Free, no ads](https://img.shields.io/badge/price-free%20%C2%B7%20no%20ads-FF6600?style=for-the-badge&labelColor=101214)
 
-## Version 1.4
+<a href="docs/media/ktmnav-launch-video.mp4"><img src="docs/media/ktmnav-hero.jpg" width="860" alt="KTMnav launch video: a KTM-style TFT dashboard showing a right-turn arrow, 250 m, Lakeside Road. Click to watch the 30-second tour."></a>
 
-Version 1.4 is a UI refresh with no backend behaviour change: KTM orange (#FF6600) everywhere including a new adaptive launcher icon, compact tab headers with a connection chip, Material Symbols icons, a grouped Settings list, a Setup checklist that shows only what still needs action (and disappears when done), real app icons in Apps, a simpler Garage add-motorcycle flow, and much less text. Design tokens and patterns: `design-system/ktmnav/pages/native-app.md`; results and screenshots: `docs/verification-1.4/`.
+<sub>▶ Click the image to watch the full 30-second tour (MP4, with sound)</sub>
 
-## Version 1.3
+[Features](#-features) · [Screenshots](#-screenshots) · [Navigation apps](#-supported-navigation-apps) · [Install](#-install--set-up) · [FAQ](#-faq) · [Build](#-build-from-source)
 
-Version 1.3 ports the features of the open-source KTM-Nav-GEN3 (Navigator Gen3) and ktm-Connect-App projects and aligns the Gen 3 link with the upstream release that was field-tested on a 390 Adventure. It also fixes a handshake bug present in 1.0 to 1.2 (the dash's auth command was read from the wrong byte). New in 1.3:
+</div>
 
-- **Gen 3 link:** corrected handshake and silent-reconnect rules, scan-then-settle reconnect, renderable banner icon, ASCII-safe dash text and an unsupported-dash message.
-- **Handlebar:** tap, double tap and long press, Music, Controller, Custom and Off modes, and long-press shortcuts.
-- **Calls:** SET answers and BACK silences, with the caller name on the dash.
-- **Dash banners:** message mirroring (opt-in) and track changes.
-- **Dashboard symbol test** and turn-icon calibration.
-- **Ride tools:** turn beeper, GPS overspeed alert, GPX ride recording with stats and track view, and a saved waypoint.
-- **Read-only OBD-II** through an ELM327 adapter, with live data, fault codes and self-learning gear estimate.
+---
 
-All of these are in Settings → Riding features and the Handlebar button mappings dialog. See [the port report](docs/OPEN-SOURCE-PORT-1.3.md) for sources, licensing, the conformance table and what was not ported.
+## 🎬 Quick look
 
-## Install and set up
+<div align="center">
+<img src="docs/media/ktmnav-teaser.gif" width="720" alt="Animated preview of KTMnav: the dashboard turn arrow, the app icon, typing a destination, tapping Go, and the supported navigation apps">
+</div>
 
-Install the APK in `delivery/` on Android 12L (API 32) or newer. Open KTMnav and allow Nearby devices. Enable KTMnav in Android **Notification access**, then turn on your motorcycle and use **Garage → Scan for motorcycles**. Select the appropriate dashboard generation, save the bike, and connect.
+## 🏍️ What is KTMnav?
 
-- **Gen 3:** Encrypted BCCU Bluetooth LE. Open the motorcycle dashboard Bluetooth menu for the first pairing prompt.
-- **Gen 2:** Bluetooth Classic RFCOMM. Pair in Android Bluetooth settings and enable Navigation in the dashboard Bluetooth menu.
-- Start navigation in a supported app. CoMaps also requires its navigation data permission.
-- Android permission prompts and motorcycle pairing are required setup steps. They cannot be pre-granted by an APK.
+KTMnav is an independent **KTM navigation app** for Android. It puts turn-by-turn guidance from your phone's navigation app on the **TFT display** of compatible KTM and Husqvarna motorcycles, such as the Gen 3 **KTM 390 Duke** and **390 Adventure**, and other bikes with Gen 2 or Gen 3 connectivity dashboards.
 
-Ride shows the observed bridge state and current guidance. The separate **Preview dashboard** option is explicitly labeled and sends nothing to the motorcycle. Settings includes background connection and filtered Gen 3 detection, reconnect, idle/media display, themes, seven app languages, dashboard data, a phone-only button lab, diagnostics, and license notices. Only values received from the motorcycle appear in the dashboard-data view.
+You keep using the navigation app you already like. KTMnav reads its guidance and sends each turn arrow, distance and street name to your dash, so you don't need a phone mount.
 
-Third-party navigation apps retain their own licensing requirements. KTMnav does not remove restrictions in other apps.
+| | |
+|---|---|
+| **Gen 3 dashboards** | Encrypted Bluetooth LE (BCCU) link with automatic fast reconnect |
+| **Gen 2 dashboards** | Bluetooth Classic (RFCOMM) |
+| **Phone** | Android 12L (API 32) or newer |
+| **Cost** | Free. Every feature included, no in-app purchases |
+| **Privacy** | Runs on your phone. No account, analytics, ads or backend server |
 
-## Build
+## ✨ Features
 
-Use JDK 17, Android SDK platform 36, and Android build tools. Set the SDK path in `local.properties` (`sdk.dir=/absolute/path/to/sdk`) or use `ANDROID_HOME`.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🧭 Navigation on the dash
+- Turn arrows, distances and street names on your TFT
+- **Navigate from KTMnav.** Type a place, address, coordinates or a Google Maps link, pick an app, tap **Go**
+- Favourites (Home, Work and more), recent destinations, places shared from other apps and `geo:` links
+- Optional **two-wheeler routing** for Google Maps
+- **Dashboard preview** on the phone, clearly labelled and never sent to the bike
+
+</td>
+<td width="50%" valign="top">
+
+### 🗺️ Planned routes (GPX)
+- Import **GPX routes** from Kurviger, Calimoto or any route planner
+- Open GPX files straight from a file manager
+- See the trace, distance, elevation gain and track points
+- **Navigate this route** in your chosen app. Google Maps gets the start, up to nine of the sharpest bends, and the end
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 🎛️ Handlebar controls (Gen 3)
+- Map **UP / DOWN / SET / BACK** to phone actions
+- **Tap, double tap and long press** on each button
+- Music, Controller, Custom and Off modes
+- Scroll, select, Back, play/pause, volume, open your navigation app
+
+</td>
+<td valign="top">
+
+### 📞 Calls &amp; messages
+- **SET answers, BACK silences** a ringing call
+- Caller name on the dashboard
+- Optional **message banners** (WhatsApp, Telegram, Signal, Google Messages and more)
+- Track-change banners for your music
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 📈 Ride tools
+- **GPX ride recording** with speed-coloured track and ride stats
+- **Turn beeper** that beeps faster as the turn gets closer
+- **GPS speed alert** with a tone and a dash alert
+- Save a waypoint and come back to it
+
+</td>
+<td valign="top">
+
+### 🔧 Garage &amp; diagnostics
+- Save **multiple motorcycles** with silhouettes for 8 styles
+- Auto-connect and background bridge
+- **Read-only OBD-II** through an ELM327 adapter: live data, fault codes, learned gear estimate
+- Dashboard **symbol test and turn-icon calibration**
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+### 🎨 Made for riders
+**KTM orange**, **Husqvarna blue** and **daylight** themes · **7 languages** (English, Deutsch, Español, Français, Italiano, Português BR/PT) · large-text, landscape and tablet layouts · large 48 dp touch targets
+
+</td>
+</tr>
+</table>
+
+## 📱 Screenshots
+
+<div align="center">
+
+| Navigate | Dashboard preview | Navigation apps | Garage |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/media/screens/ride-navigate.png" width="200" alt="KTMnav Ride tab with a Where to? field, Google Maps app button and Go button"> | <img src="docs/media/screens/dashboard-preview.png" width="200" alt="Dashboard preview showing a right turn in 250 m onto Lakeside Road"> | <img src="docs/media/screens/navigation-apps.png" width="200" alt="List of supported navigation apps: OsmAnd, Kurviger, Calimoto, Organic Maps, Locus Map, CoMaps, HERE WeGo, Sygic, Mapy.cz"> | <img src="docs/media/screens/garage.png" width="200" alt="Garage with saved motorcycles: Duke 390, KTM 390 Adventure, Svartpilen 401"> |
+
+| Handlebar buttons | Calls | Messages on dash | Ride tools |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/media/screens/handlebar-mappings.png" width="200" alt="Handlebar button mappings for UP, DOWN, SET and BACK with tap, double tap and long press"> | <img src="docs/media/screens/call-control.png" width="200" alt="Call settings: SET answers, BACK silences, caller name on the dashboard"> | <img src="docs/media/screens/messages-on-dashboard.png" width="200" alt="Messages on dashboard settings with WhatsApp, Telegram, Signal and Google Messages"> | <img src="docs/media/screens/ride-tools.png" width="200" alt="Ride tools: location, turn beeper with volume, speed alert"> |
+
+| GPX ride recording | Planned GPX route | OBD-II adapter | Symbol test |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/media/screens/gpx-ride-recording.png" width="200" alt="Ride details with a speed-coloured GPX track and ride statistics"> | <img src="docs/media/screens/gpx-planned-route.png" width="200" alt="Imported planned GPX route with distance, elevation gain and Navigate this route button"> | <img src="docs/media/screens/obd2-adapter.png" width="200" alt="Read-only OBD-II adapter screen with fault codes and gear estimate"> | <img src="docs/media/screens/dashboard-symbol-test.png" width="200" alt="Dashboard turn symbol test list"> |
+
+| Husqvarna theme | Daylight theme | Motorcycle model | Settings |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/media/screens/theme-husqvarna.png" width="200" alt="KTMnav in the Husqvarna blue theme"> | <img src="docs/media/screens/theme-daylight.png" width="200" alt="KTMnav in the light daylight theme"> | <img src="docs/media/screens/motorcycle-model.png" width="200" alt="Motorcycle style picker: Naked, Adventure, Supersport, Enduro, Supermoto, Sport touring, Scrambler, Café racer"> | <img src="docs/media/screens/settings.png" width="200" alt="Settings with setup checklist, connection and navigation options"> |
+
+</div>
+
+## 🧭 Supported navigation apps
+
+| App | Turns on your dash | Start from KTMnav |
+|---|:---:|:---:|
+| Google Maps | ✅ | ✅ |
+| Waze | ✅ | ✅ |
+| TomTom GO | ✅ | ✅ |
+| OsmAnd / OsmAnd+ | ✅ | ✅ |
+| Kurviger | ✅ | ✅ |
+| Calimoto | ✅ | ✅ |
+| Organic Maps | ✅ | ✅ |
+| Locus Map | ✅ | ✅ |
+| CoMaps | ✅ | ✅ |
+| HERE WeGo | — | ✅ |
+| Sygic | — | ✅ |
+| Mapy.cz | — | ✅ |
+
+> Third-party navigation apps keep their own terms, fees and subscriptions. KTMnav doesn't unlock or bypass anything in other apps.
+
+## 🚀 Install &amp; set up
+
+1. **Install** KTMnav on an Android 12L+ phone ([build the APK](#-build-from-source); a Google Play release is in testing).
+2. Open KTMnav and allow **Nearby devices**.
+3. Turn on KTMnav in Android **Notification access**. This lets it read navigation guidance.
+4. Switch on your motorcycle, then go to **Garage → Scan for motorcycles** and save your bike.
+   - **Gen 3:** open the dashboard's Bluetooth menu for the first pairing prompt.
+   - **Gen 2:** pair in Android Bluetooth settings and turn on *Navigation* in the dashboard Bluetooth menu.
+5. Start navigation in a supported app, or type a destination on the **Ride** tab and tap **Go**.
+
+The **Setup** checklist in the app shows only the steps you haven't done yet. Do pairing and permissions while parked.
+
+## ❓ FAQ
+
+<details>
+<summary><b>How do I get Google Maps navigation on my KTM TFT dashboard?</b></summary>
+
+Install KTMnav, allow notification access, pair your bike in Garage, and start Google Maps navigation (or type a destination in KTMnav and tap Go). The turn arrow, distance and street appear on your compatible Gen 2 or Gen 3 dashboard.
+</details>
+
+<details>
+<summary><b>Does it work with the KTM 390 Duke, 390 Adventure or Husqvarna Svartpilen?</b></summary>
+
+KTMnav targets KTM and Husqvarna bikes with **Gen 2** (Bluetooth Classic) or **Gen 3** (encrypted Bluetooth LE) connectivity dashboards, including the Gen 3 390 Duke. Support depends on your dashboard generation and firmware. Use **Settings → Dashboard symbol test** while parked to see what your dash shows. See [docs/VERIFICATION.md](docs/VERIFICATION.md) for exactly what has been tested.
+</details>
+
+<details>
+<summary><b>Can I use Waze, OsmAnd, Kurviger or Calimoto instead of Google Maps?</b></summary>
+
+Yes. Nine apps forward turns to the dash: Google Maps, Waze, TomTom GO, OsmAnd, Kurviger, Calimoto, Organic Maps, Locus Map and CoMaps. HERE WeGo, Sygic and Mapy.cz can be started from KTMnav but don't forward turns.
+</details>
+
+<details>
+<summary><b>Is it really free? Do I need an account?</b></summary>
+
+Yes, it's free, with no account, ads, subscriptions, analytics or server. Everything runs on your phone. Data goes only to your paired motorcycle over Bluetooth, and GPX files leave the phone only when you export them.
+</details>
+
+<details>
+<summary><b>Can I ride a planned route from Kurviger or Calimoto?</b></summary>
+
+Yes. Import the GPX file in **Rides → Planned routes** (or open it from a file manager) and tap **Navigate this route**.
+</details>
+
+<details>
+<summary><b>Can KTMnav control cruise control or other vehicle functions?</b></summary>
+
+No. KTMnav receives handlebar button presses and sends display data. It doesn't control the vehicle. OBD-II support is read-only.
+</details>
+
+## 🛠️ Build from source
+
+Requirements: **JDK 17**, **Android SDK 36**. Set `sdk.dir` in `local.properties` or `ANDROID_HOME`.
 
 ```sh
+git clone https://github.com/geekyshubham/KTMnav.git
+cd KTMnav
 ./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+# APK: app/build/outputs/apk/debug/app-debug.apk
 ```
 
-The installable debug-signed APK is `app/build/outputs/apk/debug/app-debug.apk`. The Gradle wrapper pins its distribution checksum. No API key or server configuration is needed.
+No API keys or server configuration are needed. Release signing, verification scripts, version history and protocol notes are in **[docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)**.
 
-## Google Play release
+## 📚 Documentation
 
-The signed Android App Bundle and listing assets for 1.4.1 (code 6) are in `delivery/play-store/`; it added an offline privacy policy under Settings → About & help. Version 1.5.0 (code 7) is the current source; build a new bundle with the command below before uploading. Release unit tests pass with no release lint errors. The bundled 64-bit native libraries use 16 KB load alignment.
+| Doc | What's inside |
+|---|---|
+| [DEVELOPMENT.md](docs/DEVELOPMENT.md) | Version history (1.2 → 1.5), build, release, verification |
+| [FEATURES.md](docs/FEATURES.md) | Feature list with test coverage |
+| [HANDLEBAR-CONTROLS.md](docs/HANDLEBAR-CONTROLS.md) | Handlebar button setup and limits |
+| [VERIFICATION.md](docs/VERIFICATION.md) | What was tested, and how |
+| [GEN3-PORT.md](docs/GEN3-PORT.md) | Gen 3 Bluetooth LE link notes |
 
-Release signing loads the local, ignored `release-signing.properties` file. Its `storeFile`, `storePassword`, `keyAlias`, and `keyPassword` properties refer to the upload key in `.signing/`. Keep both files private and back them up securely; neither is included in the source archive or store assets. Without this properties file, the release bundle is unsigned.
+## ⚖️ Disclaimer
 
-```sh
-JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home ./gradlew :app:bundleRelease :app:testReleaseUnitTest :app:lintRelease
-```
+KTMnav is an **independent project**. It is not affiliated with, endorsed by or sponsored by KTM AG or Husqvarna Motorcycles. Product names and trademarks belong to their owners and are used only to describe compatibility. Use it at your own risk, set it up while parked, and always keep your eyes on the road.
 
-The Play Console app is `KTM Nav`, package `app.ktmnav`. Public release requires finishing the console declarations and store listing, a publicly hosted privacy-policy URL, and the account's mandatory closed test with at least 12 testers opted in continuously for 14 days before applying for production access. Creating the console app or building a signed bundle does not publish it.
+<div align="center">
+<br>
+<img src="docs/media/ktmnav-icon.png" width="48" alt="KTMnav icon"><br>
+<sub>If KTMnav helps you ride, please ⭐ star the repo so other riders can find it.</sub>
+</div>
 
-## Verification
-
-With one Android emulator or device connected:
-
-```sh
-./gradlew :app:connectedDebugAndroidTest
-python3 scripts/check_android_ui.py --serial emulator-5554
-python3 scripts/check_features_ui.py
-python3 scripts/check_feature_runtime.py
-```
-
-`check_feature_runtime.py` drives real emulator SMS, incoming calls and mock GPS while the instrumentation checks message mirroring, call answer/silence, overspeed and ride recording. It runs only on an emulator and restores the permissions it grants.
-
-The instrumentation checks real Android startup and persisted bike management. UI checks exercise the four destinations, explicit preview, compact width, larger system text, landscape, and crash logs. See `docs/verification-1.5/` for version 1.5 results and screenshots, including `scripts/check_navigate_ui.py` for the Navigate card, Garage silhouettes, bundled app icons and GPX routes (older evidence under `verification-1.4/`, `verification-1.3/`, `verification-1.2/` and `verification-gen3/`); `docs/FEATURES.md` links feature coverage to the recovered evidence.
-
-Bluetooth authentication, dashboard rendering, firmware variants, and third-party navigation updates require physical motorcycle and installed navigation-app validation. An emulator cannot establish those behaviors. See [the verification report](docs/VERIFICATION.md) for the actual tested scope.
-
-## Gen 3 correction
-
-Version 1.0 mistakenly labeled the encrypted BLE route as Gen 1. The supplied code defines Gen 2 and Gen 3 only. Version 1.1 uses the original Gen 3 identity and migrates old GEN1 saved-bike settings without changing pairing keys. See [the Gen 3 port ledger](docs/GEN3-PORT.md).
-
-## Provenance
-
-The supplied APK bundle and original decompilation remain under their original names. KTMnav is a new Android project (`app.ktmnav`), with new interface and backend code. Archive observations and analysis limits are recorded in `docs/evidence/`. OpenDash and Locus API MIT notices, LiteRT Apache 2.0, and Chakra Petch OFL are bundled in the app and available in Settings.
-
-Backend implementation was assigned to `gemini-3.8-flash-high` through the local `agy` CLI after switching the native account with VibeRouter. UI direction follows the ui-ux-pro-max design system and a native-app override under `design-system/ktmnav/`.
-
-## Handlebar controls
-
-Version 1.2 adds configurable actions for real Gen 3 handlebar presses: Android Back, scrolling, focus/selection, media, volume and opening KTMnav. Enable the mapping switch and the Android access required by your chosen actions. See [setup and limits](docs/HANDLEBAR-CONTROLS.md). Settings → Included features links to all navigation integrations, background connection and the multiple-bike Garage without purchase checks.
-
-## Duke 390 phone controls
-
-The Gen 3 button lab is a local UP/DOWN/SET/BACK preview that sends no motorcycle commands. Remote cruise control is not implemented: the supplied protocol establishes receiving handlebar events, not injecting them or controlling the vehicle. See [the feasibility report](docs/DUKE390-CRUISE-FEASIBILITY.md) for the India-launch-2023 Gen 3 context and manufacturer references.

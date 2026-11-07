@@ -19,3 +19,6 @@ RideConnect-decompiled/
 *.apk
 *.aab
 delivery/**/*.zip
+
+# Local video/brag build workspace
+brag-output/
