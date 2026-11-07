@@ -15,11 +15,15 @@ A free Android app that sends turn-by-turn directions from **Google Maps, Waze, 
 ![Gen 2 and Gen 3 TFT](https://img.shields.io/badge/dashboards-Gen%202%20%7C%20Gen%203-FF6600?style=for-the-badge&labelColor=101214)
 ![Free, no ads](https://img.shields.io/badge/price-free%20%C2%B7%20no%20ads-FF6600?style=for-the-badge&labelColor=101214)
 
+<a href="https://github.com/geekyshubham/KTMnav/releases/latest/download/KTMnav-1.5.0.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.5.0-FF6600?style=for-the-badge&logo=android&logoColor=white&labelColor=101214" height="44" alt="Download KTMnav APK v1.5.0"></a>
+&nbsp;
+<a href="https://github.com/geekyshubham/KTMnav/releases"><img src="https://img.shields.io/github/downloads/geekyshubham/KTMnav/total?style=for-the-badge&color=FF6600&labelColor=101214&label=downloads" height="44" alt="Total downloads"></a>
+
 <a href="docs/media/ktmnav-launch-video.mp4"><img src="docs/media/ktmnav-hero.jpg" width="860" alt="KTMnav launch video: a KTM-style TFT dashboard showing a right-turn arrow, 250 m, Lakeside Road. Click to watch the 30-second tour."></a>
 
 <sub>▶ Click the image to watch the full 30-second tour (MP4, with sound)</sub>
 
-[Features](#-features) · [Screenshots](#-screenshots) · [Navigation apps](#-supported-navigation-apps) · [Install](#-install--set-up) · [FAQ](#-faq) · [Build](#-build-from-source)
+[Download](#-install--set-up) · [Features](#-features) · [Screenshots](#-screenshots) · [Navigation apps](#-supported-navigation-apps) · [FAQ](#-faq) · [Build](#-build-from-source)
 
 </div>
 
@@ -162,7 +166,7 @@ You keep using the navigation app you already like. KTMnav reads its guidance an
 
 ## 🚀 Install &amp; set up
 
-1. **Install** KTMnav on an Android 12L+ phone ([build the APK](#-build-from-source); a Google Play release is in testing).
+1. **Download [`KTMnav-1.5.0.apk`](https://github.com/geekyshubham/KTMnav/releases/latest/download/KTMnav-1.5.0.apk)** from [Releases](https://github.com/geekyshubham/KTMnav/releases) on an Android 12L+ phone and open it. Allow installing from your browser if Android asks. A Google Play release is in testing.
 2. Open KTMnav and allow **Nearby devices**.
 3. Turn on KTMnav in Android **Notification access**. This lets it read navigation guidance.
 4. Switch on your motorcycle, then go to **Garage → Scan for motorcycles** and save your bike.
