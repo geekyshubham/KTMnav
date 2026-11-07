@@ -31,9 +31,11 @@ A free Android app that sends turn-by-turn directions from **Google Maps, Waze, 
 
 ## 🎬 Quick look
 
-<div align="center">
-<img src="docs/media/ktmnav-teaser.gif" width="720" alt="Animated preview of KTMnav: the dashboard turn arrow, the app icon, typing a destination, tapping Go, and the supported navigation apps">
-</div>
+
+
+https://github.com/user-attachments/assets/bf5d8fdd-995b-4ea5-a43b-3aa4d61908a6
+
+
 
 ## 🏍️ What is KTMnav?
 
